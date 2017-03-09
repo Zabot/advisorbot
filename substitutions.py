@@ -16,10 +16,16 @@ def teachers(clazz):
 # Builds up a tree view of course prerequisites where each parent-child relationship represents a prequisite
 def prereq_tree(root, depth=0, ended={0:True}):
     tree = ""
+
+    # If this class has already been added, skip it
+    if root["number"] in ended:
+        return tree
+
     for i in range(0, depth - 1):
         tree += "  " if ended[i] else "│ "
 
     tree += ("" if depth == 0 else ("└─" if ended[depth] else "├─")) + root["number"] + "\n"
+    ended[ root["number"] ] = True
 
     # If there are no prereqs to this class, we are done
     if not "prereqs" in root:
