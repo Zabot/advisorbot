@@ -4,7 +4,7 @@ def title(clazz):
 def number(clazz):
     return clazz["number"]
 
-def desc(cazz):
+def desc(clazz):
     return clazz["desc"]
 
 def prereqs(clazz):
