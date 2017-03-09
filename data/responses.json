@@ -14,27 +14,32 @@
         "The Lincoln Program is the general education requirment set by the university on all students. The specific courses required by the Lincoln Program can be found here:\nhttps://www.siue.edu/registrar/genedguides.shtml"
     ]
 },{
+    "keywords": ["drop", "withdraw"],
+    "response": [
+        "There are two withdrawl deadlines. If you withdraw from a class before March 24th, you will receive a W on your transcript and it will not affect your overal GPA. You may still withdraw until April 14th and recieve a WP or WF depending on if you were passing the class at the time of your withdrawl. A WP will not affect your GPA, but a WF counts as a failing grade for the purposes of GPA. More information is avaiable here:\nhttps://www.siue.edu/registrar/class/dropping.shtml"
+    ]
+},{
     "keywords": ["elective"],
     "response": [
-        "As part of a BS in computer science, you are required to take 4 electives, worth a total 12 credit hours, the classes that qualify include: $electives()"
+        "As part of a BS in computer science, you are required to take 4 electives, worth a total 12 credit hours, the classes that qualify include:"
     ]
 },{
     "keywords": ["prereq","prequisites","take.*for","how do"],
     "response": [
-        "You have to take $prereqs before you can take $short.\n```$prereq_tree```"
+        "You have to take $prereqs(m[0]) before you can take $number(m[0]).\n```$prereq_tree(m[0])```"
     ]
 },{
     "keywords": ["about", "description", "describe"],
-    "response": ["$title\n$desc"]
+    "response": ["$title(m[0])\n$desc(m[0])"]
 },{
     "keywords": ["name", "title", "called", "what is"],
     "response": [
-        "$short is $title."
+        "$number(m[0]) is $title(m[0])."
     ]
 },{ 
     "keywords": ["teaches", "professor", "leads"],
     "response": [
-        "This semester $short is being taught by $teachers."
+        "This semester $number(m[0]) is being taught by $teachers(m[0])."
     ]
 },{ 
     "keywords": ["help"],
