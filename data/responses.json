@@ -30,7 +30,7 @@
     ]
 },{
     "keywords": ["about", "description", "describe"],
-    "response": ["$title(m[0])\n$desc(m[0])"]
+    "response": ["$title(m[0])\n$desc(m[0])\n$number(m[0]) is being taught by $teachers(m[0]) this semester"]
 },{
     "keywords": ["name", "title", "called", "what is"],
     "response": [
