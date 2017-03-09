@@ -11,7 +11,7 @@ def prereqs(clazz):
     return expand_list([p["number"] for p in clazz["prereqs"] ])
 
 def teachers(clazz):
-    return expand_list([p["teachers"] for p in clazz["teachers"] ])
+    return expand_list(clazz["teachers"], "or")
 
 # Builds up a tree view of course prerequisites where each parent-child relationship represents a prequisite
 def prereq_tree(root, depth=0, ended={0:True}):
