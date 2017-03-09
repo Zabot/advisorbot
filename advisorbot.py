@@ -16,10 +16,10 @@ def get_bot_id(slack_client, bot_name):
         print("could not find bot user with the name " + bot_name)
 
 # instantiate Slack & Twilio clients
-slack_client = SlackClient(os.environ.get('SLACK_BOT_TOKEN'))
-
-BOT_ID = get_bot_id(slack_client, "advisorbot")
-AT_BOT = "<@" + BOT_ID + ">"
+with open("api.token", "r") as token:
+    slack_client = SlackClient(token.read().strip())
+    BOT_ID = get_bot_id(slack_client, "advisorbot")
+    AT_BOT = "<@" + BOT_ID + ">"
 
 
 def handle_command(command, channel):
