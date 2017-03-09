@@ -10,7 +10,7 @@ with open('data/classes.json') as course_info:
 # Gets the json info associated with a particular class name
 def get_class_by_name(name):
     match = re.match("([A-Z]+) ?(\d{3})", name)
-    return classes[ match[1] ][ match[2] ]
+    return classes[ match.group(1) ][ match.group(2) ]
 
 # Store each classes number in the class info object and inflate the prerequiste graph
 for prefix, numbers in classes.items():
@@ -35,7 +35,7 @@ keywords = {"|".join(key["keywords"]):key["response"] for key in keywords}
 def handle(s):
     try:
         # Grab all of the classes mentioned in s (If no prefix, assume CS)
-        names_mentioned = [ " ".join((match[0] if match[0] else "CS", match[1])) for match in re.findall(course, s.upper()) ]
+        names_mentioned = [ " ".join((match.group(1) if match.group(1) else "CS", match.group(2))) for match in re.finditer(course, s.upper()) ]
 
         # Grabs all of the responses that would be appropriate for the located keywords
         responses = [response for regex, response in keywords.items() if re.search(regex, s.lower()) is not None ]
@@ -55,7 +55,7 @@ def handle(s):
 
 def substitute(identifier, mentioned, args):
     # If any of the arguments request mentioned classes, substitute now
-    args = [ re.sub("m\[(\d)\]", lambda m: mentioned[int(m[1])], arg) for arg in args ]
+    args = [ re.sub("m\[(\d)\]", lambda m: mentioned[int(m.group(1))], arg) for arg in args ]
 
     # Now substitute class numbers for class objects
     args = [ get_class_by_name(arg) for arg in args if re.match("([A-Z]+) ?(\d{3})", arg) ]
