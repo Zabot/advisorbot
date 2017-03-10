@@ -46,5 +46,10 @@
     "response": [
         "I respond to questions about `graduation` requirements, `prerequisites`, and questions about individual classes."
     ]
+},{ 
+    "keywords": [".*"],
+    "response": [
+        "I don't understand you, please try something else"
+    ]
 }]
 

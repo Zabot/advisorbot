@@ -40,10 +40,6 @@ def handle(s):
         # Grabs all of the responses that would be appropriate for the located keywords
         responses = [response for regex, response in keywords.items() if re.search(regex, s.lower()) is not None ]
 
-        # If we didn't find any keywords in the string, give up
-        if not responses:
-            return "I'm sorry, I don't understand you. Please try something else."
-
         # Assume 1 keyword and 1 class mentioned
         response = responses[ 0 ][ random.randint( 0, len(responses[0]) - 1 ) ]
 
