@@ -2,7 +2,11 @@
     "CS":{
         "000":{
             "title"   :"Bachelor of Science in Computer Science",
-            "prereqs":["CS 499", "CS 447", "CS 330", "CS 111", "ECE 282", "MATH 152"]
+            "prereqs" :["CS 499", "CS 447", "CS 330", "CS 111", "ECE 282", "MATH 152"]
+        },
+        "002":{
+            "title"   :"BS Electives",
+            "prereqs" :["CS 382", "CS 423", "CS 434", "CS 438", "CS 454", "CS 456", "CS 482", "CS 490", "CS 495"]
         },
         "111":{
             "title"   :"Concepts of Computer Science",
@@ -33,7 +37,7 @@
             "teachers": ["Steven Klein"]
         },
         "286":{
-            "title"   :"Introduction to Computer Orginzation and Architechture",
+            "title"   :"Introduction to Computer Organization and Architecture",
             "prereqs": ["CS 150"],
             "desc": "",
             "teachers": ["Dr. Mark McKenney"]
@@ -68,17 +72,63 @@
             "desc": "",
             "teachers": ["Dr. Gunes Ercal"]
         },
+        "382":{
+            "title"   :"Game Design, Development, and Technology",
+            "prereqs": ["CS 286", "CS 321", "MATH 152"],
+            "desc": "",
+            "teachers": ["Dr. William White"]
+        },
+        "423":{
+            "title"   :"Compiler Construction",
+            "prereqs": ["CS 330"],
+            "desc": ""
+        },
         "425":{
             "title"   :"Senior Project: Software Design",
             "prereqs": ["CS 314", "CS 321", "CS 325", "CS 340"],
             "desc": "",
             "teachers": ["Dr. Dennis Bouvier"]
         },
+        "434":{
+            "title"   :"Database Management Systems",
+            "prereqs": ["CS 234", "CS 240"],
+            "desc": ""
+        },
+        "438":{
+            "title"   :"Artificial Intelligence",
+            "prereqs": ["CS 340"],
+            "desc": ""
+        },
         "447":{
             "title"   :"Networks and Data Communications",
             "prereqs": ["CS 314", "CS 340"],
             "desc": "",
             "teachers": ["Dr. Thoshitha Gamage"]
+        },
+        "454":{
+            "title"   :"Theory of Computation",
+            "prereqs": ["CS 340"],
+            "desc": ""
+        },
+        "456":{
+            "title"   :"Advanced Algorithms",
+            "prereqs": ["CS 340"],
+            "desc": ""
+        },
+        "482":{
+            "title"   :"Computer Graphics",
+            "prereqs": ["CS 240", "CS 286", "MATH 152"],
+            "desc": ""
+        },
+        "490":{
+            "title"   :"Topics in Computer Science",
+            "prereqs": [],
+            "desc": ""
+        },
+        "495":{
+            "title"   :"Independent Study",
+            "prereqs": [],
+            "desc": ""
         },
         "499":{
             "title"   :"Senior Project: Software Implementation",
