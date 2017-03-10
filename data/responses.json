@@ -24,7 +24,7 @@
         "As part of a BS in computer science, you are required to take 4 electives, worth a total 12 credit hours, the classes that qualify include:\n$prereqs(CS002)"
     ]
 },{
-    "keywords": ["prereq","perquisites","take.*for","how do"],
+    "keywords": ["prereq","prerequisites","take.*for","how do"],
     "response": [
         "You have to take $prereqs(m[0]) before you can take $number(m[0]).\n```$prereq_tree(m[0])```"
     ]
