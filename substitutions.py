@@ -5,13 +5,17 @@ def number(clazz):
     return clazz["number"]
 
 def desc(clazz):
-    return clazz["desc"]
+    if "desc" in clazz:
+        return clazz["desc"]
+    return "Class description goes here"
 
 def prereqs(clazz):
     return expand_list([p["number"] for p in clazz["prereqs"] ])
 
 def teachers(clazz):
-    return expand_list(clazz["teachers"], "or")
+    if "teachers" in clazz:
+        return expand_list(clazz["teachers"], "or")
+    return "<Unknown>"
 
 # Builds up a tree view of course prerequisites where each parent-child relationship represents a prequisite
 def prereq_tree(root, depth=0, ended={0:True}):
@@ -28,7 +32,7 @@ def prereq_tree(root, depth=0, ended={0:True}):
     ended[ root["number"] ] = True
 
     # If there are no prereqs to this class, we are done
-    if not "prereqs" in root:
+    if not "prereqs" in root or not root["prereqs"]:
         return tree
 
     ended[depth] = False
@@ -54,5 +58,7 @@ def expand_list(lst, conjunction="and"):
         return string + ", " + conjunction + " " + lst[-1]
     elif len(lst) > 1:
         return string + " " + conjunction + " " + lst[-1]
+    elif len(lst) == 0:
+        return "None"
     else:
         return lst[-1]

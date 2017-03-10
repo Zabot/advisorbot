@@ -29,9 +29,6 @@
         "You have to take $prereqs(m[0]) before you can take $number(m[0]).\n```$prereq_tree(m[0])```"
     ]
 },{
-    "keywords": ["about", "description", "describe"],
-    "response": ["$title(m[0])\n$desc(m[0])\n$number(m[0]) is being taught by $teachers(m[0]) this semester"]
-},{
     "keywords": ["name", "title", "called", "what is"],
     "response": [
         "$number(m[0]) is $title(m[0])."
@@ -47,6 +44,9 @@
         "I respond to questions about `graduation` requirements, `prerequisites`, and questions about individual classes."
     ]
 },{ 
+    "keywords": ["about", "description", "describe", "\\d{3}"],
+    "response": ["$number(m[0]) *$title(m[0])*\n$desc(m[0])\nUsually taught by: $teachers(m[0])\nPrerequisites: $prereqs(m[0])"]
+},{
     "keywords": [".*"],
     "response": [
         "I don't understand you, please try something else"

@@ -10,130 +10,109 @@
         },
         "111":{
             "title"   :"Concepts of Computer Science",
-            "desc": "",
+            "prereqs": [],
             "teachers": ["Steven Klein"]
         },
         "140":{
             "title"   :"Introduction to Computing I",
-            "desc": "",
+            "prereqs": [],
             "teachers": ["Lenora Tetzner", "John Matta"]
         },
         "150":{
             "title"   :"Introduction to Computing II",
             "prereqs": ["CS 140"],
-            "desc": "",
             "teachers": ["Ellie Lovellette", "Socratis Tornaritis"]
         },
         "234":{
             "title"   :"Database and Web System Development",
             "prereqs": ["CS 150"],
-            "desc": "",
             "teachers": ["Socratis Tornaritis"]
         },
         "240":{
             "title"   :"Introduction to Computing III",
             "prereqs": ["CS 150"],
-            "desc": "",
             "teachers": ["Steven Klein"]
         },
         "286":{
             "title"   :"Introduction to Computer Organization and Architecture",
             "prereqs": ["CS 150"],
-            "desc": "",
             "teachers": ["Dr. Mark McKenney"]
         },
         "314":{
             "title"   :"Operating Systems",
             "prereqs": ["CS 286"],
-            "desc": "",
             "teachers": ["Dr. Hiroshi Fujinoki"]
         },
         "321":{
             "title"   :"Human-Computer Interaction Design",
             "prereqs": ["CS 234", "STAT 380"],
-            "desc": "",
             "teachers": ["Dr. William White"]
         },
         "325":{
             "title"   :"Software Engineering",
             "prereqs": ["CS 234", "CS 240"],
-            "desc": "",
             "teachers": ["Dr. Gary Mayer", "Dr. William White"]
         },
         "330":{
             "title"   :"Programming Languages",
             "prereqs": ["CS 286"],
-            "desc": "",
             "teachers": ["Dr. Dennis Bouvier"]
         },
         "340":{
             "title"   :"Algorithms and Data Structures",
             "prereqs": ["CS 240", "MATH 150", "MATH 224"],
-            "desc": "",
             "teachers": ["Dr. Gunes Ercal"]
         },
         "382":{
             "title"   :"Game Design, Development, and Technology",
             "prereqs": ["CS 286", "CS 321", "MATH 152"],
-            "desc": "",
             "teachers": ["Dr. William White"]
         },
         "423":{
             "title"   :"Compiler Construction",
-            "prereqs": ["CS 330"],
-            "desc": ""
+            "prereqs": ["CS 330"]
         },
         "425":{
             "title"   :"Senior Project: Software Design",
             "prereqs": ["CS 314", "CS 321", "CS 325", "CS 340"],
-            "desc": "",
             "teachers": ["Dr. Dennis Bouvier"]
         },
         "434":{
             "title"   :"Database Management Systems",
-            "prereqs": ["CS 234", "CS 240"],
-            "desc": ""
+            "prereqs": ["CS 234", "CS 240"]
         },
         "438":{
             "title"   :"Artificial Intelligence",
-            "prereqs": ["CS 340"],
-            "desc": ""
+            "prereqs": ["CS 340"]
         },
         "447":{
             "title"   :"Networks and Data Communications",
             "prereqs": ["CS 314", "CS 340"],
-            "desc": "",
             "teachers": ["Dr. Thoshitha Gamage"]
         },
         "454":{
             "title"   :"Theory of Computation",
-            "prereqs": ["CS 340"],
-            "desc": ""
+            "prereqs": ["CS 340"]
         },
         "456":{
             "title"   :"Advanced Algorithms",
-            "prereqs": ["CS 340"],
-            "desc": ""
+            "prereqs": ["CS 340"]
         },
         "482":{
             "title"   :"Computer Graphics",
-            "prereqs": ["CS 240", "CS 286", "MATH 152"],
-            "desc": ""
+            "prereqs": ["CS 240", "CS 286", "MATH 152"]
         },
         "490":{
             "title"   :"Topics in Computer Science",
-            "prereqs": [],
-            "desc": ""
+            "prereqs": []
         },
         "495":{
             "title"   :"Independent Study",
-            "prereqs": [],
-            "desc": ""
+            "prereqs": []
         },
         "499":{
             "title"   :"Senior Project: Software Implementation",
             "prereqs": ["CS 425"],
-            "desc": "",
             "teachers": ["Dr. Gary Mayer"]
         }
     },
@@ -141,26 +120,23 @@
         "282":{
             "title":"Digital Systems Design",
             "prereqs": ["CS 140"],
-            "desc":"",
             "teachers": ["Electrical Engineering Faculty"]
         }
     },
     "MATH":{
         "150":{
             "title":"Calculus I",
-            "desc":"",
+            "prereqs": [],
             "teachers": ["Math Faculty"]
         },
         "152":{
             "title":"Calculus II",
             "prereqs": ["MATH 150"],
-            "desc":"",
             "teachers": ["Math Faculty"]
         },
         "224":{
             "title":"discreet math",
             "prereqs": ["CS 140"],
-            "desc":"",
             "teachers": ["Math Faculty"]
         }
     },
@@ -168,8 +144,6 @@
         "380":{
             "title":"STAT 380",
             "prereqs": ["MATH 152"],
-            "desc":"",
-            "desc":"",
             "teachers": ["Math Faculty"]
         }
     }
