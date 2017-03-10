@@ -1,4 +1,25 @@
-# Adding Responses
+#Advisorbot
+Advisorbot is a chat bot with slack integration designed to provide information about the CS curriculum at Southern Illinois
+University Edwardsville.
+
+## Dependencies
+Advisorbot uses python3 and [python-slackclient](https://github.com/slackapi/python-slackclient) to communicate with a slack bot.
+Installation can be done with [PyIP](https://pypi.python.org/pypi). See the slackclient page for more details
+
+    pip install slackclient
+
+## API token
+Advisorbot also requires an API token to connect to the team. This token can be found on the custom bot integration
+page and must be saved as `api.token` in the same directory as `advisorbot.py`. Anyone that knows this token can
+control the slack bot without further authentication, so it should not be pushed to the repository or shared with
+anyone.
+
+### Running without the API token
+For testing purposes advisorbot can be run without the slack integration by running `advisorbot_console.py`. Any
+text on the standard input will be feed through the same procedure as if it had been said to advisorbot by a user,
+and the final response will be written to standard out.
+
+## Adding Responses
 Responses can be added by changing `data/responses.json`. `responses.json` is a list
 of objects containing lists of keywords that trigger the responses, and a list of appropriate
 responses, of which one will be selected at random to be used as the reply. Responses may have substitution
